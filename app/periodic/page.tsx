@@ -64,7 +64,7 @@ const formSchema = z.object({
 type PeriodType = "monthly" | "biweekly" | "weekly" | "daily" | "hourly" | null;
 type ResultsType = string | null;
 
-export const Page = () => {
+export const Periodic = () => {
   const [selectedPeriod, setSelectedPeriod] = useState<PeriodType>(null);
   const [result, setResult] = useState<ResultsType>(null);
 
@@ -172,4 +172,4 @@ export const Page = () => {
   );
 };
 
-export default Page;
+export default Periodic;

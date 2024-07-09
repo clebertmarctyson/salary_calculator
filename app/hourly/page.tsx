@@ -46,7 +46,7 @@ type ResultsType = {
   daily: string;
 } | null;
 
-export const HourlyToAnnual = () => {
+export const Hourly = () => {
   const [results, setResults] = useState<ResultsType>(null);
 
   const form = useForm({
@@ -206,4 +206,4 @@ export const HourlyToAnnual = () => {
   );
 };
 
-export default HourlyToAnnual;
+export default Hourly;

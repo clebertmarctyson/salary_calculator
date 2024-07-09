@@ -35,7 +35,7 @@ type ResultsType = {
   hourly: string;
 } | null;
 
-export const Page = () => {
+export const Annual = () => {
   const [results, setResults] = useState<ResultsType>(null);
 
   const form = useForm({
@@ -135,4 +135,4 @@ export const Page = () => {
   );
 };
 
-export default Page;
+export default Annual;
