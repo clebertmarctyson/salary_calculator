@@ -46,14 +46,14 @@ type ResultsType = {
   daily: string;
 } | null;
 
-export const Hourly = () => {
+export const Page = () => {
   const [results, setResults] = useState<ResultsType>(null);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
+  const onSubmit = (data: any) => {
     const { hourlySalary, numberOfHoursPerDay, numberOfDaysPerWeek } = data;
 
     const daily = hourlySalary * numberOfHoursPerDay;
@@ -206,4 +206,4 @@ export const Hourly = () => {
   );
 };
 
-export default Hourly;
+export default Page;

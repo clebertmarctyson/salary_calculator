@@ -2,11 +2,10 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { set, z } from "zod";
+import { z } from "zod";
 
 import {
   Form,
-  FormControl,
   FormDescription,
   FormField,
   FormItem,
@@ -64,7 +63,7 @@ const formSchema = z.object({
 type PeriodType = "monthly" | "biweekly" | "weekly" | "daily" | "hourly" | null;
 type ResultsType = string | null;
 
-export const Periodic = () => {
+export const Page = () => {
   const [selectedPeriod, setSelectedPeriod] = useState<PeriodType>(null);
   const [result, setResult] = useState<ResultsType>(null);
 
@@ -72,7 +71,7 @@ export const Periodic = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
+  const onSubmit = (data: any) => {
     const { periodicSalary } = data;
     setResult(calculatePeriodicToAnnual(periodicSalary, selectedPeriod!));
   };
@@ -136,9 +135,7 @@ export const Periodic = () => {
                     <FormDescription>
                       Enter the periodic salary to convert to annual salary.
                     </FormDescription>
-                    <FormMessage>
-                      {form.formState.errors.periodicSalary?.message}
-                    </FormMessage>
+                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -172,4 +169,4 @@ export const Periodic = () => {
   );
 };
 
-export default Periodic;
+export default Page;

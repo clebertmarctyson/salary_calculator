@@ -35,14 +35,14 @@ type ResultsType = {
   hourly: string;
 } | null;
 
-export const Annual = () => {
+export const Page = () => {
   const [results, setResults] = useState<ResultsType>(null);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
+  const onSubmit = (data: any) => {
     const { annualSalary } = data;
 
     const monthly = annualSalary / 12;
@@ -135,4 +135,4 @@ export const Annual = () => {
   );
 };
 
-export default Annual;
+export default Page;
