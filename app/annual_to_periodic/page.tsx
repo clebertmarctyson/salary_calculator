@@ -35,7 +35,7 @@ type ResultsType = {
   hourly: string;
 } | null;
 
-export function AnnualToPeriodic() {
+export const Page = () => {
   const [results, setResults] = useState<ResultsType>(null);
 
   const form = useForm({
@@ -133,6 +133,6 @@ export function AnnualToPeriodic() {
       )}
     </div>
   );
-}
+};
 
-export default AnnualToPeriodic;
+export default Page;
