@@ -8,17 +8,17 @@ const options = [
   {
     id: 1,
     label: "Annual to Periodic Salary Calculation",
-    value: "annual_to_periodic",
+    value: "annual-to-periodic",
   },
   {
     id: 2,
     label: "Periodic to Annual Salary Calculation",
-    value: "periodic_to_annual",
+    value: "periodic-to-annual",
   },
   {
     id: 3,
     label: "Hourly to Annual Salary Calculation",
-    value: "hourly_to_annual",
+    value: "hourly-to-annual",
   },
 ];
 
